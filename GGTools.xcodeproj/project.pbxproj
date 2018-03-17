@@ -17,6 +17,13 @@
 		63088EF62058D45C00033B22 /* GGCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63088EF52058D45C00033B22 /* GGCarrierInfo.m */; };
 		63088EF92058D4C100033B22 /* GGWifiInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63088EF82058D4C100033B22 /* GGWifiInfo.m */; };
 		63088EFD2058EC6D00033B22 /* GGNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 63088EFC2058EC6D00033B22 /* GGNetwork.m */; };
+		63088F002059157F00033B22 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63088EFF2059157F00033B22 /* CoreTelephony.framework */; };
+		63088F022059158D00033B22 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63088F012059158D00033B22 /* SystemConfiguration.framework */; };
+		63088F042059159900033B22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63088F032059159900033B22 /* Foundation.framework */; };
+		63E8D9D2205CCB7700CD8283 /* GGCoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9D1205CCB7700CD8283 /* GGCoreTextData.m */; };
+		63E8D9D5205CCC1B00CD8283 /* GGCoreTextTypeSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9D4205CCC1B00CD8283 /* GGCoreTextTypeSetting.m */; };
+		63E8D9D8205CD0EB00CD8283 /* GGCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9D7205CD0EB00CD8283 /* GGCoreTextView.m */; };
+		63E8D9DB205CE07300CD8283 /* GGCoreTextPagingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9DA205CE07300CD8283 /* GGCoreTextPagingTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,19 @@
 		63088EF82058D4C100033B22 /* GGWifiInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGWifiInfo.m; sourceTree = "<group>"; };
 		63088EFB2058EC6D00033B22 /* GGNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGNetwork.h; sourceTree = "<group>"; };
 		63088EFC2058EC6D00033B22 /* GGNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGNetwork.m; sourceTree = "<group>"; };
+		63088EFF2059157F00033B22 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		63088F012059158D00033B22 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		63088F032059159900033B22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63088F05205915B800033B22 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		63E8D9D0205CCB7700CD8283 /* GGCoreTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextData.h; sourceTree = "<group>"; };
+		63E8D9D1205CCB7700CD8283 /* GGCoreTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCoreTextData.m; sourceTree = "<group>"; };
+		63E8D9D3205CCC1B00CD8283 /* GGCoreTextTypeSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextTypeSetting.h; sourceTree = "<group>"; };
+		63E8D9D4205CCC1B00CD8283 /* GGCoreTextTypeSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCoreTextTypeSetting.m; sourceTree = "<group>"; };
+		63E8D9D6205CD0EB00CD8283 /* GGCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextView.h; sourceTree = "<group>"; };
+		63E8D9D7205CD0EB00CD8283 /* GGCoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCoreTextView.m; sourceTree = "<group>"; };
+		63E8D9D9205CE07300CD8283 /* GGCoreTextPagingTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextPagingTool.h; sourceTree = "<group>"; };
+		63E8D9DA205CE07300CD8283 /* GGCoreTextPagingTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCoreTextPagingTool.m; sourceTree = "<group>"; };
+		63E8D9DC205CE0E800CD8283 /* GGCoreTextHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63088F042059159900033B22 /* Foundation.framework in Frameworks */,
+				63088F022059158D00033B22 /* SystemConfiguration.framework in Frameworks */,
+				63088F002059157F00033B22 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +79,7 @@
 			children = (
 				63088EBD20580A1A00033B22 /* GGTools */,
 				63088EBC20580A1A00033B22 /* Products */,
+				63088EFE2059157F00033B22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +111,7 @@
 		63088EED2058D2F900033B22 /* GGTools */ = {
 			isa = PBXGroup;
 			children = (
+				63E8D9CB205CCB5A00CD8283 /* GGCoreText */,
 				63088EFA2058EC6000033B22 /* GGNetwork */,
 				63088EEE2058D2F900033B22 /* GGDeviceInfo */,
 				63088EEF2058D2F900033B22 /* GGCarrierInfo */,
@@ -129,6 +154,65 @@
 				63088EFC2058EC6D00033B22 /* GGNetwork.m */,
 			);
 			path = GGNetwork;
+			sourceTree = "<group>";
+		};
+		63088EFE2059157F00033B22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63088F05205915B800033B22 /* libSystem.tbd */,
+				63088F032059159900033B22 /* Foundation.framework */,
+				63088F012059158D00033B22 /* SystemConfiguration.framework */,
+				63088EFF2059157F00033B22 /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E8D9CB205CCB5A00CD8283 /* GGCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				63E8D9CC205CCB5A00CD8283 /* GGCoreTextView */,
+				63E8D9CD205CCB5A00CD8283 /* GGCoreTextData */,
+				63E8D9CE205CCB5A00CD8283 /* GGCoreTextTypeSetting */,
+				63E8D9CF205CCB5A00CD8283 /* GGCoreTextPagingTool */,
+				63E8D9DC205CE0E800CD8283 /* GGCoreTextHeader.h */,
+			);
+			path = GGCoreText;
+			sourceTree = "<group>";
+		};
+		63E8D9CC205CCB5A00CD8283 /* GGCoreTextView */ = {
+			isa = PBXGroup;
+			children = (
+				63E8D9D6205CD0EB00CD8283 /* GGCoreTextView.h */,
+				63E8D9D7205CD0EB00CD8283 /* GGCoreTextView.m */,
+			);
+			path = GGCoreTextView;
+			sourceTree = "<group>";
+		};
+		63E8D9CD205CCB5A00CD8283 /* GGCoreTextData */ = {
+			isa = PBXGroup;
+			children = (
+				63E8D9D0205CCB7700CD8283 /* GGCoreTextData.h */,
+				63E8D9D1205CCB7700CD8283 /* GGCoreTextData.m */,
+			);
+			path = GGCoreTextData;
+			sourceTree = "<group>";
+		};
+		63E8D9CE205CCB5A00CD8283 /* GGCoreTextTypeSetting */ = {
+			isa = PBXGroup;
+			children = (
+				63E8D9D3205CCC1B00CD8283 /* GGCoreTextTypeSetting.h */,
+				63E8D9D4205CCC1B00CD8283 /* GGCoreTextTypeSetting.m */,
+			);
+			path = GGCoreTextTypeSetting;
+			sourceTree = "<group>";
+		};
+		63E8D9CF205CCB5A00CD8283 /* GGCoreTextPagingTool */ = {
+			isa = PBXGroup;
+			children = (
+				63E8D9D9205CE07300CD8283 /* GGCoreTextPagingTool.h */,
+				63E8D9DA205CE07300CD8283 /* GGCoreTextPagingTool.m */,
+			);
+			path = GGCoreTextPagingTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E8D9D5205CCC1B00CD8283 /* GGCoreTextTypeSetting.m in Sources */,
 				63088EC320580A1A00033B22 /* ViewController.m in Sources */,
+				63E8D9D2205CCB7700CD8283 /* GGCoreTextData.m in Sources */,
 				63088ECE20580A1A00033B22 /* main.m in Sources */,
+				63E8D9DB205CE07300CD8283 /* GGCoreTextPagingTool.m in Sources */,
 				63088EC020580A1A00033B22 /* AppDelegate.m in Sources */,
 				63088EF32058D33700033B22 /* GGDeviceInfo.m in Sources */,
 				63088EFD2058EC6D00033B22 /* GGNetwork.m in Sources */,
 				63088EF92058D4C100033B22 /* GGWifiInfo.m in Sources */,
+				63E8D9D8205CD0EB00CD8283 /* GGCoreTextView.m in Sources */,
 				63088EF62058D45C00033B22 /* GGCarrierInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

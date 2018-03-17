@@ -17,9 +17,10 @@
 + (NSURLSessionDataTask *)gg_postWithURLString:(NSString *)urlString httpBody:(NSData *)httpBody resultBlock:(void(^)(NSError *error,id result))resultBlock{
     
     NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
+//    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
     NSTimeInterval timeOut = 15;
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:cachePolicy timeoutInterval:timeOut];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:0 timeoutInterval:timeOut];
+    
     request.HTTPMethod = @"POST";
     request.HTTPBody = httpBody;
     
@@ -43,6 +44,11 @@
     [task resume];
     return task;
 }
+
+/*
+ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLSession.h:547:11: Unknown type name 'NSURLRequestCachePolicy'
+ */
+
 #pragma GET
 #pragma ********************* 发起一个GET 请求 *********************
 + (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters resultBlock:(void(^)(NSError *error,id result))resultBlock{

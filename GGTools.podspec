@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GGTools"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Tools that are often used."
 
   # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ GGTools provides tools that are frequently used to make development easier and f
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -123,7 +123,7 @@ GGTools provides tools that are frequently used to make development easier and f
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
-    s.libraries = "sys"
+  # s.libraries = "sys"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

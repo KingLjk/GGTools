@@ -9,25 +9,26 @@
 #import "GGDeviceInfo.h"
 
 // 获取设备型号需要导入的头文件
-#import <sys/sysctl.h>
+//#import <sys/sysctl.h>
 
 @implementation GGDeviceInfo
 
 + (NSString *)platform{
     
-    int mib[2];
-    size_t len;
-    char *machine;
-    
-    mib[0] = CTL_HW;
-    mib[1] = HW_MACHINE;
-    sysctl(mib, 2, NULL, &len, NULL, 0);
-    machine = malloc(len);
-    sysctl(mib, 2, machine, &len, NULL, 0);
-    
-    NSString *platform = [NSString stringWithCString:machine encoding:NSASCIIStringEncoding];
-    free(machine);
-    
+//    int mib[2];
+//    size_t len;
+//    char *machine;
+//
+//    mib[0] = CTL_HW;
+//    mib[1] = HW_MACHINE;
+//    sysctl(mib, 2, NULL, &len, NULL, 0);
+//    machine = malloc(len);
+//    sysctl(mib, 2, machine, &len, NULL, 0);
+//
+//    NSString *platform = [NSString stringWithCString:machine encoding:NSASCIIStringEncoding];
+//    free(machine);
+//
+    NSString *platform = @"12";
     return platform;
 }
 
