@@ -111,6 +111,7 @@
 		63088EED2058D2F900033B22 /* GGTools */ = {
 			isa = PBXGroup;
 			children = (
+				631BA56C206E1525008E865D /* GGProgressHUD */,
 				63E8D9CB205CCB5A00CD8283 /* GGCoreText */,
 				63088EFA2058EC6000033B22 /* GGNetwork */,
 				63088EEE2058D2F900033B22 /* GGDeviceInfo */,
@@ -165,6 +166,13 @@
 				63088EFF2059157F00033B22 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		631BA56C206E1525008E865D /* GGProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GGProgressHUD;
 			sourceTree = "<group>";
 		};
 		63E8D9CB205CCB5A00CD8283 /* GGCoreText */ = {

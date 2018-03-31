@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GGTools"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Tools that are often used."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ GGTools provides tools that are frequently used to make development easier and f
   #
 
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.source_files  = "GGTools/GGTools/**/*.{h,m}"
+  s.source_files  = "GGTools/GGTools/**/*.{h,m}","GGTools/GGTools/**/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
