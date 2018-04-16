@@ -53,6 +53,25 @@
 #pragma ********************* 发起一个GET 请求 *********************
 + (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters resultBlock:(void(^)(NSError *error,id result))resultBlock{
     
+//    NSString *parametersString = [self convertToStringWithDict:parameters];
+//    NSString *string = [NSString stringWithFormat:@"%@%@",urlString,parametersString ? [NSString stringWithFormat:@"?%@",parametersString] : @""];
+//    NSLog(@"%@",string);
+//    NSCharacterSet *characters = [NSCharacterSet URLQueryAllowedCharacterSet];
+//    string = [string stringByAddingPercentEncodingWithAllowedCharacters:characters];
+//
+//    NSURL *url = [NSURL URLWithString:string];
+//    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
+//    NSTimeInterval timeOut = 15;
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:cachePolicy timeoutInterval:timeOut];
+//
+//    NSURLSessionDataTask *task = [self gg_creatDataTaskWithURLRequest:request resultBlock:resultBlock];
+//    [task resume];
+//
+//    return task;
+    return [self gg_getWithURLString:urlString parameters:parameters time:15 resultBlock:resultBlock];
+}
++ (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters time:(NSTimeInterval)timeOut resultBlock:(void(^)(NSError *error,id result))resultBlock{
+    
     NSString *parametersString = [self convertToStringWithDict:parameters];
     NSString *string = [NSString stringWithFormat:@"%@%@",urlString,parametersString ? [NSString stringWithFormat:@"?%@",parametersString] : @""];
     NSLog(@"%@",string);
@@ -61,7 +80,6 @@
     
     NSURL *url = [NSURL URLWithString:string];
     NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
-    NSTimeInterval timeOut = 15;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:cachePolicy timeoutInterval:timeOut];
     
     NSURLSessionDataTask *task = [self gg_creatDataTaskWithURLRequest:request resultBlock:resultBlock];

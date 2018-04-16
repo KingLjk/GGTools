@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "GGCoreTextHeader.h"
+#import "GGNetwork.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     GGCoreTextView *displayView = [GGCoreTextView new];
     [self.view addSubview:displayView];
@@ -63,6 +65,9 @@
 //
     
     self.displayView.coreTextData = date;
+    
+    
+    
     
 }
 

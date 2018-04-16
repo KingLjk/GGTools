@@ -21,4 +21,14 @@
 + (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters resultBlock:(void(^)(NSError *error,id result))resultBlock;
 
 
+/**
+ 发起一个get请求,可设置超时时常
+
+ @param urlString 请求地址
+ @param parameters 参数
+ @param timeOut 超时时常
+ @param resultBlock 会调
+ @return 任务实例
+ */
++ (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters time:(NSTimeInterval)timeOut resultBlock:(void(^)(NSError *error,id result))resultBlock;
 @end
