@@ -24,6 +24,7 @@
 		63E8D9D5205CCC1B00CD8283 /* GGCoreTextTypeSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9D4205CCC1B00CD8283 /* GGCoreTextTypeSetting.m */; };
 		63E8D9D8205CD0EB00CD8283 /* GGCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9D7205CD0EB00CD8283 /* GGCoreTextView.m */; };
 		63E8D9DB205CE07300CD8283 /* GGCoreTextPagingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8D9DA205CE07300CD8283 /* GGCoreTextPagingTool.m */; };
+		63F00095209EF5E600796BFA /* GGUnderLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F00093209EF5E600796BFA /* GGUnderLineTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		63E8D9D9205CE07300CD8283 /* GGCoreTextPagingTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextPagingTool.h; sourceTree = "<group>"; };
 		63E8D9DA205CE07300CD8283 /* GGCoreTextPagingTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCoreTextPagingTool.m; sourceTree = "<group>"; };
 		63E8D9DC205CE0E800CD8283 /* GGCoreTextHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCoreTextHeader.h; sourceTree = "<group>"; };
+		63F00093209EF5E600796BFA /* GGUnderLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGUnderLineTextField.m; sourceTree = "<group>"; };
+		63F00094209EF5E600796BFA /* GGUnderLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGUnderLineTextField.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		63088EED2058D2F900033B22 /* GGTools */ = {
 			isa = PBXGroup;
 			children = (
+				63F00092209EF5E600796BFA /* GGUnderLineTextField */,
 				631BA56C206E1525008E865D /* GGProgressHUD */,
 				63E8D9CB205CCB5A00CD8283 /* GGCoreText */,
 				63088EFA2058EC6000033B22 /* GGNetwork */,
@@ -223,6 +227,15 @@
 			path = GGCoreTextPagingTool;
 			sourceTree = "<group>";
 		};
+		63F00092209EF5E600796BFA /* GGUnderLineTextField */ = {
+			isa = PBXGroup;
+			children = (
+				63F00093209EF5E600796BFA /* GGUnderLineTextField.m */,
+				63F00094209EF5E600796BFA /* GGUnderLineTextField.h */,
+			);
+			path = GGUnderLineTextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +318,7 @@
 				63088EFD2058EC6D00033B22 /* GGNetwork.m in Sources */,
 				63088EF92058D4C100033B22 /* GGWifiInfo.m in Sources */,
 				63E8D9D8205CD0EB00CD8283 /* GGCoreTextView.m in Sources */,
+				63F00095209EF5E600796BFA /* GGUnderLineTextField.m in Sources */,
 				63088EF62058D45C00033B22 /* GGCarrierInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

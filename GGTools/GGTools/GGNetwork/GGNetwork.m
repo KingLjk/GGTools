@@ -16,9 +16,12 @@
 #pragma ********************* 发起一个POST请求（NSData） *********************
 + (NSURLSessionDataTask *)gg_postWithURLString:(NSString *)urlString httpBody:(NSData *)httpBody resultBlock:(void(^)(NSError *error,id result))resultBlock{
     
+    return [self gg_postWithURLString:urlString httpBody:httpBody time:15 resultBlock:resultBlock];
+}
++ (NSURLSessionDataTask *)gg_postWithURLString:(NSString *)urlString httpBody:(NSData *)httpBody time:(NSTimeInterval)timeOut resultBlock:(void(^)(NSError *error,id result))resultBlock{
+    
     NSURL *url = [NSURL URLWithString:urlString];
-//    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
-    NSTimeInterval timeOut = 15;
+    //    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:0 timeoutInterval:timeOut];
     
     request.HTTPMethod = @"POST";
@@ -28,14 +31,22 @@
     [task resume];
     return task;
 }
+
+
+
 #pragma ********************* 发起一个POST请求（NSDictionary） *********************
 + (NSURLSessionDataTask *)gg_postWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters resultBlock:(void(^)(NSError *error,id result))resultBlock{
+    
+    return [self gg_postWithURLString:urlString parameters:parameters time:15 resultBlock:resultBlock];
+}
+
+#pragma ********************* 发起一个POST请求（NSDictionary） *********************
++ (NSURLSessionDataTask *)gg_postWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters time:(NSTimeInterval)timeOut resultBlock:(void(^)(NSError *error,id result))resultBlock{
     
     NSString *parametersString = [self convertToStringWithDict:parameters];
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
-    NSTimeInterval timeOut = 15;
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:cachePolicy timeoutInterval:timeOut];
     request.HTTPMethod = @"POST";
     request.HTTPBody = [parametersString dataUsingEncoding:NSUTF8StringEncoding];
@@ -45,6 +56,8 @@
     return task;
 }
 
+
+
 /*
  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLSession.h:547:11: Unknown type name 'NSURLRequestCachePolicy'
  */
@@ -53,21 +66,6 @@
 #pragma ********************* 发起一个GET 请求 *********************
 + (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters resultBlock:(void(^)(NSError *error,id result))resultBlock{
     
-//    NSString *parametersString = [self convertToStringWithDict:parameters];
-//    NSString *string = [NSString stringWithFormat:@"%@%@",urlString,parametersString ? [NSString stringWithFormat:@"?%@",parametersString] : @""];
-//    NSLog(@"%@",string);
-//    NSCharacterSet *characters = [NSCharacterSet URLQueryAllowedCharacterSet];
-//    string = [string stringByAddingPercentEncodingWithAllowedCharacters:characters];
-//
-//    NSURL *url = [NSURL URLWithString:string];
-//    NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
-//    NSTimeInterval timeOut = 15;
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:cachePolicy timeoutInterval:timeOut];
-//
-//    NSURLSessionDataTask *task = [self gg_creatDataTaskWithURLRequest:request resultBlock:resultBlock];
-//    [task resume];
-//
-//    return task;
     return [self gg_getWithURLString:urlString parameters:parameters time:15 resultBlock:resultBlock];
 }
 + (NSURLSessionDataTask *)gg_getWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters time:(NSTimeInterval)timeOut resultBlock:(void(^)(NSError *error,id result))resultBlock{
